@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<title>jQuery仿淘宝购物车</title>
+<link rel="stylesheet" type="text/css" href="./css/bootstrap.css">
+<link type="text/css" rel="stylesheet" href="./css/car.css" />
+<!--图标库-->
+<link rel="stylesheet" href="./css/font-awesome-4.7.0/css/font-awesome.min.css">
+
+
+<style>
+.modalIndex{
+     z-index: 999;
+}
+.shopping-car-container .goods-content .goods-item .car-goods-info{
+	height:100px;
+}
+.col-md-2{
+	width:12%;
+}
+.col-md-3{
+	width:40%;
+}
+</style>
+</head>
+
+
+<body>
+	<div class="head" style="background-color: red;height: 50px;">
+		<div class="user" >
+			<i class="fa fa-user-circle-o"></i>
+			<span class="email"></span>
+		</div>
+		<div class="account-btn">
+			<input class="logout" type="button" value="注销">
+		</div>
+    </div>
+	<div class="shopping-car-container">
+		<div class="car-headers-menu">
+			<div class="row">
+				<div class="col-md-2 car-menu">订单编号</div>
+				<div class="col-md-8 car-menu" style="width: 40%;">商品信息</div>
+				<div class="col-md-2 car-menu">订单价格</div>
+				<div class="col-md-2 car-menu">订单状态</div>
+				<div class="col-md-2 car-menu">操作时间</div>
+				<div class="col-md-2 car-menu">操作</div>
+			</div>
+		</div>
+		<div class="goods-content">
+			
+		</div>
+			
+		<!--付款确认弹框-->
+		<div class="modal fade" tabindex="-1" role="dialog" id="payItemTip" aria-labelledby="gridSystemModalLabel">
+			<div class="modal-dialog modalIndex" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						<h4 class="modal-title" id="gridSystemModalLabel">提示</h4>
+					</div>
+					<div class="modal-body">
+						确认付款？
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+						<button type="button" class="btn btn-primary paySure" >确定</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	<!--付款确认弹框-->
+		<div class="modal fade" tabindex="-1" role="dialog" id="cancelItemTip" aria-labelledby="gridSystemModalLabel">
+
+			<div class="modal-dialog modalIndex" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						<h4 class="modal-title" id="gridSystemModalLabel">提示</h4>
+					</div>
+					<div class="modal-body">
+						确认取消订单？
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+						<button type="button" class="btn btn-primary cancelSure" >确定</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<div class="modal fade" tabindex="-1" role="dialog" id="detailItemTip" aria-labelledby="gridSystemModalLabel">
+			<div class="modal-dialog modalIndex" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						<h4 class="modal-title" id="gridSystemModalLabel">详情</h4>
+					</div>
+					<div class="modal-body orderDetail">
+						
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript" src="./js/jquery.min.js"></script>
+	<script type="text/javascript" src="./js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/shop.js"></script>	
+	<script type="text/javascript" src="./js/order.js"></script>	
+</body>
+</html>
